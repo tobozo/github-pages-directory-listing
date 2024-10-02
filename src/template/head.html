@@ -4,10 +4,18 @@
 <head>
     <title>Index of {{foldername}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf8">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        darkMode: 'class', /* 'class' or 'media', we use 'class' to enable dark mode manually */
+    };
+    document.documentElement.classList.add('dark');
+        
+    </script>
 </head>
 
-<body>
+<body class="bg-slate-100 dark:bg-slate-800">
     <div class="m-2 lg:m-4">
         <span class="font-bold tracking-wide text-2xl text-gray-700">Index of {{foldername}}</span>
     </div>
