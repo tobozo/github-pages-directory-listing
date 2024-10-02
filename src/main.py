@@ -41,7 +41,9 @@ def main():
                         "<a href=\"../\">../</a></th><td>-</td><td>-</td><td>-</td></tr>" if dirname != "." else "",
                         ]))
                 #sort dirnames alphabetically
-                dirnames.sort()
+                # dirnames.sort()
+                sorted_dirnames = sorted(dirnames, key=str.casefold)
+
                 for subdirname in dirnames:
                     f.write("<tr><th scope=\"row\"><img style=\"max-width:1rem; margin-right:.25rem\" src=\"" + get_icon_base64("o.folder") + "\"/>" + "<a href=\"" + subdirname + "/\">" +
                             subdirname + "/</a></th><td>-</td><td>-</td><td>-</td></tr>\n")
