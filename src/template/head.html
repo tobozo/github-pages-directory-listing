@@ -4,20 +4,34 @@
   <link rel="SHORTCUT ICON" href="favicon.ico">
   <meta charset="utf8">
   <style type="text/css">
-    body {background-repeat : no-repeat; background-position : 0% 0%; background-color : #000000; color: #CCCCCC; } .texte{ color: #CCCCCC;} A {COLOR:#c0c0c0; TEXT-DECORATION: none} A:link {COLOR:#009E99 ; TEXT-DECORATION: none} A:visited {COLOR:#007070 ; TEXT-DECORATION: none} A:active {COLOR:#5e6f8e ; TEXT-DECORATION: none} A:hover {COLOR:#000000 ; TEXT-DECORATION: none}
+    body { background-repeat : no-repeat; background-position : 0% 0%; background-color : #000000; color: #CCCCCC; }
+    .texte { color: #CCCCCC;}
+    a {color:#c0c0c0; text-decoration: none}
+    a:link {color:#009e99 ; text-decoration: none}
+    a:visited {color:#007070 ; text-decoration: none}
+    a:active {color:#5e6f8e ; text-decoration: none}
+    a:hover {color:#000000 ; text-decoration: none}
+    th[scope="row"] {
+        text-align: left;
+        white-space: nowrap;
+        min-width: 15em;
+    }
+    th[scope="col"] {
+        padding-right: 1em;
+    }
   </style>
   <title>"Ah ? c'est une bibliothèque la ? ..je croyais que c'etait le siège social d'un dealer" (Madchat)</title>
 </head>
 <body bgcolor="#000000" text="#B0B0B0" link="#009E99" vlink="#008080">
     <h1>Index of {{foldername}}</h1>
-
-<table>
-    <thead>
-        <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Size</th>
-            <th scope="col">Last Modified</th>
-            <th scope="col">Description</th>
-        </tr>
-    </thead>
-    <tbody>
+    <hr />
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Size</th>
+                <th scope="col">Last Modified</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
