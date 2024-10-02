@@ -37,20 +37,20 @@ def main():
             with open(os.path.join(dirname, 'index.html'), 'w', encoding="utf-8") as f:
                 f.write("\n".join([
                     get_template_head(dirname),
-                    "<tr><th scope=\"row\" ><img style=\"max-width:23px; margin-right:5px\" src=\"" + get_icon_base64("o.folder-home") + "\"/>" +
+                    "<tr><th scope=\"row\" ><img style=\"max-width:1rem; margin-right:.25rem\" src=\"" + get_icon_base64("o.folder-home") + "\"/>" +
                         "<a href=\"../\">../</a></th><td>-</td><td>-</td><td>-</td></tr>" if dirname != "." else "",
                         ]))
                 #sort dirnames alphabetically
                 dirnames.sort()
                 for subdirname in dirnames:
-                    f.write("<tr><th scope=\"row\"><img style=\"max-width:23px; margin-right:5px\" src=\"" + get_icon_base64("o.folder") + "\"/>" + "<a href=\"" + subdirname + "/\">" +
+                    f.write("<tr><th scope=\"row\"><img style=\"max-width:1rem; margin-right:.25rem\" src=\"" + get_icon_base64("o.folder") + "\"/>" + "<a href=\"" + subdirname + "/\">" +
                             subdirname + "/</a></th><td>-</td><td>-</td><td>-</td></tr>\n")
                 #sort filenames alphabetically
                 filenames.sort()
                 for filename in filenames:
                     path = (dirname == '.' and filename or dirname +
                             '/' + filename)
-                    f.write("<tr><th scope=\"row\"><img style=\"max-width:23px; margin-right:5px\" src=\"" + get_icon_base64(filename) + "\"/>" + "<a href=\"" + filename + "\">" + filename + "</a></th><td>" +
+                    f.write("<tr><th scope=\"row\"><img style=\"max-width:1rem; margin-right:.25rem\" src=\"" + get_icon_base64(filename) + "\"/>" + "<a href=\"" + filename + "\">" + filename + "</a></th><td>" +
                             get_file_size(path) + "</td><td>" + get_file_modified_time(path) + "</td><td>-</td></tr>\n")
 
                 f.write("\n".join([
